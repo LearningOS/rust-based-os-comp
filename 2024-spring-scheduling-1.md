@@ -5,8 +5,8 @@
 - [常见问题解答](./QA.md)
 - [Learning Resource](./relatedinfo.md) (训练营学习资源)
 - Online Ranking （训练营在线排行榜）
-  - [第一阶段排行：Rust Lang]
-  - [rustlings Rust编程训练教室]
+  - [第一阶段排行：Rust Lang](https://learningos.cn/rust-rustlings-2024-spring-ranking/)
+  - [rustlings Rust编程训练教室](https://classroom.github.com/a/-WftLmvV)
 
 欢迎在校学生/工程师在2024年春季参加清华大学、CSDN、阿图教育等共同举办的**2024年春季开源操作系统训练营**活动（2024.4.07～2024.6.07）。训练营结束后，部分表现突出的同学将获得训练营优秀证书。鼓励同学继续以开源社区的方式参与到企业/科研院所的操作系统实习/实践/工作/学习等相关的活动。
 
@@ -54,7 +54,7 @@
        
        1. 在网络浏览器中用自己的 github id 登录 github.com。
        
-       2. 接收 [Rust-lang Lab Test based on Rustlings 的github classroom在线邀请](https://classroom.github.com/a/gbr5Jk7V)  ，根据提示一路选择OK即可。
+       2. 接收 [Rust-lang Lab Test based on Rustlings 的github classroom在线邀请](https://classroom.github.com/a/-WftLmvV)  ，根据提示一路选择OK即可。
        
        3. 完成第二步后，你的rustings实验练习 的 github repository 会被自动建立好，点击此github repository的链接，就可看到你要完成的实验了。
        
