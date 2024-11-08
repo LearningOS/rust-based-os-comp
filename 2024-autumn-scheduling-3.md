@@ -22,6 +22,10 @@
 在三周时间内为大家带来9次线上课程，介绍组件化 unikernel、宏内核与 hypervisor 三部分内容。
 
 
+- [第一周课程ppt预览版](https://github.com/arceos-org/oscamp/tree/main/course)
+- [arceos 实验代码链接](https://github.com/arceos-org/oscamp/tree/main/arceos)
+  - 注：大家自行 clone 到本地进行实验即可，不需要提交，阶段结束提交实验报告
+
 ### 参考资料
 
 #### 课程背景
