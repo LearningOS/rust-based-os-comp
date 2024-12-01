@@ -3,8 +3,8 @@
 Welcome to Open-Source OS Training Comp 2024（欢迎加入2024 年开源操作系统训练营）
 
 ## 重要信息
-- 2024.10.21: 2024年秋冬季开源操作系统训练营第二阶段 专业阶段 - OS设计实现 正式开始，为期两周 [二阶段晋级榜单](https://opencamp.cn/os2edu/camp/2024fall/stage/2?tab=rank)
-- 2024.10.20: 2024年秋冬季开源操作系统训练营第一阶段 基础阶段 - Rust编程 结束，[一阶段晋级榜单](https://opencamp.cn/os2edu/camp/2024fall/stage/1?tab=rank)
+- 2024.10.21: 2024年秋冬季开源操作系统训练营第二阶段 专业阶段 - OS设计实现 两周 [二阶段晋级榜单](https://opencamp.cn/os2edu/camp/2024fall/stage/2?tab=rank)
+- 2024.10.20: 2024年秋冬季开源操作系统训练营第一阶段 基础阶段 - Rust编程 三周 [一阶段晋级榜单](https://opencamp.cn/os2edu/camp/2024fall/stage/1?tab=rank)
 - 2024春夏季训练营第一阶段资料
   - [第一节课ppt](https://cloud.tsinghua.edu.cn/f/fd23a79ab58f49f6891c/)
   - （第二节课为直播答疑课程，没有ppt，请转到训练营页面查看回放）
