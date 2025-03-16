@@ -66,7 +66,7 @@ Welcome to Open-Source OS Training Comp 2024（欢迎加入2024 年开源操作�
 
 ## 支持与合作单位
 
-- [rcore-os 开源社区](https://github.com/rcore-os)
+- [唐图(rCore-OS)开源社区](https://github.com/rcore-os)
 - [木兰开源社区](https://portal.mulanos.cn)
 - CCF开源发展委员会
 - CCF系统软件专业技术委员会
