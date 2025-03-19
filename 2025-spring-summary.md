@@ -1,5 +1,18 @@
 # 2025 年春夏季操作系统训练营信息汇总
 
+## 总材料
+
+- 训练营 Github 主页：https://github.com/LearningOS
+- 训练营任务公告（公告内容会有更详细的关于每一阶段的说明）
+  - [第一阶段公告](https://github.com/LearningOS/rust-based-os-comp2025/blob/main/2025-spring-scheduling-1.md)
+  - [第二阶段公告](https://github.com/LearningOS/rust-based-os-comp2025/blob/main/2025-spring-scheduling-2.md)
+  - 第三阶段公告：TODO
+- 常见问题：[QA](https://github.com/LearningOS/rust-based-os-comp2025/blob/main/QA.md)
+- 提问方式：
+  - 问答论坛：https://opencamp.cn/os2edu/bbs，欢迎大家积极发帖讨论
+  - 在微信群中提问，如果长时间未得到回复可以手动 at 负责人
+  - **注意**: 有任何疑问，请优先查看 [常见问题](https://github.com/LearningOS/rust-based-os-comp2025/blob/main/QA.md)，确认常见问题列表中不存在您的问题，再通过微信群@助教以及【问答论坛】等方式提问， 常见问题列表会随着训练营的推进不断补充完善，感谢大家的参与和支持！
+
 ## 时间表
 
 总时间：2025 年 3 月 30 日～2025 年 6 月 22 日，共 12 周
@@ -151,4 +164,3 @@ TODO
   - 在微信群中提问，如果长时间未得到回复可以手动 at 负责人
   - **注意：**有任何疑问，请优先查看 [常见问题](https://github.com/LearningOS/rust-based-os-comp2025/blob/main/QA.md)，确认常见问题列表中不存在您的问题，再通过微信群@助教以及【问答论坛】等方式提问， 常见问题列表会随着训练营的推进不断补充完善，感谢大家的参与和支持！
 
-  
