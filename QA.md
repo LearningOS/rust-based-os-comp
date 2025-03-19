@@ -1,209 +1,260 @@
-# 常见问题解答
+# 2025 年春夏季训练营常见问题收集
+## 配置环境、入门相关
+1. 我不会用 Linux 命令行 / Git？
 
-## Q0：GitHub classroom 是啥？如何使用？
+    - Linux教程 https://101.lug.ustc.edu.cn
+    - Git教程 https://liaoxuefeng.com/books/git/introduction/index.html
+2. 安装 Rustlings 时报错 error: linker `cc` not found 
 
-### A：
+    安装build-essential和libclang-dev。具体命令与你的 Linux 发行版有关，例如 Ubuntu 是 
+    ```sh
+    sudo apt-get install build-essential libclang-dev
+    ```
 
-- [B 站的 GitHub Classroom 视频介绍](https://www.bilibili.com/video/BV12L41147r7?spm_id_from=333.337.search-card.all.click&vd_source=8e19ee6e49f598fda8c17e306d8b3726)
-- [Youtube 的 GitHub Classroom 视频介绍](https://www.youtube.com/playlist?list=PLIRjfNq867bewk3ZGV6Z7a16YDNRCpK3u)
-- [GitHub 文档：使用 GitHub Classroom 教学](https://docs.github.com/cn/education/manage-coursework-with-github-classroom/get-started-with-github-classroom)
+3. 推荐使用什么系统参加实验？
 
-## Q1：已经在 classroom 中建立了自己的仓库（例如“LearningOS/lab0-0-setup-env-run-os1-chyyuu2022”），但是源仓库“LearningOS/rust-based-os-comp2022”更新了，如何处理？
+    虽然 Rustlings 可在各平台运行，但后续阶段的实验只能在 Linux 运行。特别地，推荐 Windows 用户直接使用 WSL2 功能，这是大部分同学和老师的环境，遇到问题更方便解答。
 
-### A：
+4. WSL2 安装失败怎么办？
 
-**方法一：**
+    要打开 hyper-v，适用于linux的windows子系统等几个功能，见 
+    - https://blog.csdn.net/m0_62815143/article/details/141285504
+    - https://blog.csdn.net/weixin_72451481/article/details/140964676
 
-    重新点击加入课程的链接，在页面下方会有一行字“We've configured the repository associated with this assignment (update)”，“update”是一个链接，点击 update 就可以把自己的仓库更新到与最新状态的 repository template 一致。
+## 授课常见问题
+1. “进入教室”的按钮为灰色无法点击？
 
-**方法二：**
+    先点左侧的“课程签到”再点击“进入教室”
 
-在自己构建的仓库根目录下执行以下命令：
+2. 上课了，但是教室里是白屏且没有老师，怎么办？
+    
+    不同阶段/项目有不同的教室，请确认当前阶段和地址栏链接是否正确。另外如果自查没问题，请在群里及时反馈，可能是平台出现了问题。
 
-```bash
-git remote add upstream "https://github.com/LearningOS/rust-based-os-comp2022.git"
-git fetch upstream
-git checkout -b foo
-git branch -D main
-git checkout -t upstream/main
-git reset --hard origin/main
-git push -f
-```
+3. 进入教室提示“进入教室失败，聊天功能受限，请刷新页面重试”怎么办？
+    
+    没有影响，直接刷新页面即可，不影响上课
 
-**方法三：**
+4. 我满分了，但组队界面没显示晋级，有影响吗？
 
-    向管理员“助教许善朴”申请删除已生成仓库，再点击 链接重新创建仓库。
+    组队界面的“晋级”提示是所有人都晋级才会出现。晋级以个人为单位，就算队伍没晋级，也不受影响。组队功能只是鼓励同学们相互帮助，不作强制要求。
 
-## Q2：在 classroom 中建立了自己的仓库中，进行提交 `git push` 后，触发 CI 后，出现 Annotations 错误“The job was not stared because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings”，无法完成自动 CI 功能，比如 `Autograding` 等。
+5. 上课结束后，没看到录播怎么办？
 
-### A：
+    录播需要一定时间转码。可以在群里联系助教上传录播。
 
-**方法一：**
+## 导学阶段常见问题
+1. 这个组队是干啥的？
 
-    这是由于对用户的私有仓库进行 CI 相关的 GitHub Action 是需要付费的。用户可通过给自己的 github 账户充值来解决。https://docs.github.com/cn/billing/managing-billing-for-github-actions/about-billing-for-github-actions 给出了具体信息。
+    为了更好地发挥小组学习的互相促进作用，我们鼓励大家根据高校/城市来组队学习。学员可以自愿组队，不强制要求每个人必须参加组队。作为组队的队长，有责任协助所在学习小分队的成员完成学习任务。
 
-**方法二：**
+    我们鼓励推崇组内合作共同进步，因此只要队长所在小组的全体成员都能成功晋级，作为队长将会给予特别奖励，具体奖励办法会在队长小群里讨论公布，希望接下来还有更多学习小分队组建成立。
 
-    对用户的公开仓库进行 CI GitHub Action 是不需要付费的。在项目的 `Settings` -> `Change visibility` 将项目改成 Public, 重新触发 Action。
-    目前设置了让用户具有修改自己的项目从 private --> public 的能力。
-    如果用户还是发现自己的权限不够，或看不到  `Settings`  这个选项，可以通过联系助教帮助来解决。
+    高校报名的学生鼓励提前组队磨合，训练营的组队人数每个队3-6人为宜。
 
-## Q3：我刚开始准备学习 Rust，是 Rust 新手，我应该如何入门？
+2. 导学阶段的要求是啥？需要做实验吗？
 
-### A：
+    导学阶段没有实验要求。公告的 Rustlings 实验是第一阶段内容，非导学阶段内容。第一阶段在9月29日开始，10月20日结束。关于实验的更多信息可以参考下面的 第一阶段常见问题 章节。
 
-- [Rust 大佬给初学者的学习建议](https://github.com/rustlang-cn/Rustt/blob/main/Articles/%5B2022-04-02%5D%20Rust%20%E5%A4%A7%E4%BD%AC%E7%BB%99%E5%88%9D%E5%AD%A6%E8%80%85%E7%9A%84%E5%AD%A6%E4%B9%A0%E5%BB%BA%E8%AE%AE.md)
-- [张汉东：学习 Rust 你需要一个认知框架](https://zhuanlan.zhihu.com/p/494001676)
-- [Rust 语言圣经（Rust Course）](https://course.rs/)
-- [Rust 速查表（cheatsheet）](https://cheats.rs/) 该项目不仅提供了基础的语法速查，还有执行顺序详解和编写时需要关注的注意事项。项目还包含了示例代码（EX）、书籍（BK）、标准（STD）等相关资料的扩展。
+    我们也鼓励学有余力的同学预习实验、观看导学阶段课程：https://opencamp.cn/os2edu/camp/2024fall/stage/0?tab=video
 
-## Q4：我不熟悉 GitHub 和 Git，有啥快速入门的资源吗？
+3. 前两个阶段不用组队吧？
 
-### A：
+    组队不是强求的。组队的目的是促进小组内的互助学习，只要有人做founder，现在(从第一阶段开始之前）就可以开始填表来发起组队。
 
-- [包括：从 0 开始学习 GitHub 系列 1-7](https://jtxiao.com/main/categories/%E5%B7%A5%E5%85%B7/)
-- [超级简单的 Git 入门](https://backlog.com/git-tutorial/cn/)
-- [git - 简明指南](https://rogerdudler.github.io/git-guide/index.zh.html)
-- [中文 git-tips](https://github.com/521xueweihan/git-tips)
-- [GitHub 官方制作的 Git 速查表](https://education.github.com/git-cheat-sheet-education.pdf)
+    第三个阶段为项目实习，要听实习导师安排，不需要组队。
 
-## Q5：我不熟悉 Linux 的各种命令，有啥快速入门的资源吗？
+4. 如何才能参加项目实习？
 
-### A：
+    要晋级到第三阶段才能参加项目。第三阶段是跟着项目选题走，不需要组队，由选题方向的负责人来统一安排实习内容和分组成员。第三阶段有点类似本科毕业了提前进入导师课题组。
 
-- [中文 Linux 命令（linux-command）搜索引擎](https://wangchujiang.com/linux-command/)：随用随搜 Linux 命令，而且还支持中文搜索
-- [新版 Linux 命令百科全书》（英文）](https://github.com/tldr-pages/tldr)
+5. 可以邀请我的同学或同事入群组队吗？
 
-## Q6：我碰到一些命令/应用（比如 vim, curl）、操作（比如 vscode）或语言用法（比如 Makefile）等不知到哪里能快速查找，怎么办？
+    欢迎邀请同学或同事组队，本次训练营可以在网站上直接复制邀请链接进行邀请。邀请数量足够多的同学还可以获得一定的奖励哦。
 
-### A：
+6. 第三阶段可以当实习经历吗，还是说可以直接当毕设？
 
-- [Rico's cheatsheets](https://devhints.io/) 开源、全面的速查表网站，涵盖了前端、后端、运维、IDE 多个方面，而且界面友好简洁支持在线查看
-- [所有与命令行相关的 cheatsheet](http://cheat.sh/)：号称「你唯一需要的命令行相关速查表」
+    可以看看有目前的进展和选题，难度应该足够做为本科毕设。第三阶段有条件来北京或其他合作单位（国汽智联创新中心、济南泉城实验室等）的同学，可以作为校外实习，需要单独沟通实习协议。
 
-## Q7：我可以正常 `make run`，但使用 `make test` 命令后，构件过程报了许多错（`asm!` not found in scope），Autograding 也无法通过，怎么办？
+    关于是否可以当做毕设，向勇老师回复：在2022年和2023年主持开源毕设，这里有当时同学结果分享，需要做毕设的可以参考：https://shimo.im/docs/J9kWJRjYVyqhvJyD。后续向勇老师还会发布今年的开源毕设相关信息。有兴趣的同学可以关注群里消息。
 
-### A：
+7.  请问本训练营前置知识或者基础水平是怎么样的？
 
-这是由于内置的 `ci-user/riscv` 代码有错误，在 Autograding 时远程的 `riscv` 依赖被替换，导致编译失败。
+    Rust 可以是零基础，但编程最好有一门系统语言（C/C++语言）的基础。硬件方面预学习资料是 RISC-V 体系架构，可以提前做预习。参考陈渝老师给的链接： https://github.com/LearningOS -> Self Learning
 
-**方法一：**
+    我相信，如果您有一定的其他架构基础，如x86，aarch64，mips或者loongarch等架构的了解，这部分的知识对您而言应当不是非常困难。如果您对此没有相关基础，相比于其他硬件架构，riscv架构也足够简单，可以作为基本的入门学习使用。
 
-    替换内置的 riscv 至正常版本，直接删除本地 `ci-user/riscv` 文件夹，替换为 [ Yakkhini / rust-based-os-comp2022](https://github.com/Yakkhini/rust-based-os-comp2022/tree/main/ci-user) 同位置的修复版本 `/riscv`。
+8.  推荐学员的学习笔记
+    
+    RISC-V: 跟着清华训练营从零打造OS第一课：https://mp.weixin.qq.com/s/hLsKow_Zj_NEuNXZhCe5Vg
 
-**方法二：**
+9.  导学阶段课程内容介绍
+    
+    - 导学阶段的课程视频也在训练营网站上https://opencamp.cn/os2edu/camp/2024fall/stage/0?tab=video。
+    主要内容为清华大学本科生操作系统课程，主要目的为在开课前希望大家对操作系统一些基本概念有一定的了解。建议观看一遍，但是我们并不会对其进行考察。
 
-    删除 `ci-user/overwrite.py` 21 行以下部分的依赖替换脚本。
+    - 训练营的同学也可以参考：https://github.com/LearningOS/os-lectures/。
 
-**方法三：**
+    - 非常感谢刘恒意同学的针对清华大学操作系统课程的资料整理，在上述基础上做了一版mdbook格式的文档资料：https://lzzsg.github.io/Tsinghua-OS-mdbook/lec1/p5-tryunix.html。
 
-    替换你实验文件夹中 `Cargo.toml` 的 riscv 依赖网址为 `https://GitHub.com/rcore-os/riscv`（修改了网址的大小写）或 `https://gitee.com/rcore-os/riscv`（改为 Gitee 源），使脚本中的替换匹配失效。
+10.  证书发放问题
+    
+    本次训练营总共分为四个阶段（不包括正式开营前的导学阶段）。当通过了所有阶段，会为同学们发放最终证书。希望各位好好努力哦
 
-**方法四：**
+## 第一阶段常见问题
+1. rustling第一阶段什么难度？
 
-    如果你能看到这个 QA，说明相关 Pull request 已被 merge，可以按 QA1 中方法更新仓库。
+    晋级的往届学员，平均投入10小时就可完成110分，最快的学员3-4小时，慢一些的大约需要投入15-20个小时。另外，仓库的路径字典序不代表题目难度顺序。建议同学参考仓库的 exercises 目录下README.md文档中的顺序做题（从 structs 一节开始）。
 
-## Q8：在用vscode的esbonio （for Sphinx：rst-->html,...）和rust-analyzer插件时，不能正常工作。请问如何配置？
+2. rustling怎么检验呢 ?
 
-### A：
+    可以提前本地试一试，提交成功会进入下一题，正式开营后需要从classroom认领作业再提交，这样的成绩评分才会出现在本期训练营排行榜上。
 
-**esbonio error：找不到 conf.py 文件**
+3. 全程自己一个人可以到第三阶段吗？
 
-**解决方法**
+    可以
 
-    在 .vscode/settings.json中添加如下内容：
+4. 今年秋冬季训练营第一阶段晋级要求是什么？
 
-    "esbonio.sphinx.confDir": "${workspaceFolder}/guide/source"
+    第一阶段晋级要求是完成 110题达到满分才能晋级到第二阶段。
 
-**rust-analyzer插件无法正常解析源代码中的相关定义**
+5. 这个没有晋级的话就只能等下一轮的训练营吗？还是整个训练营期间满分了就可以晋级?
 
-    比如 os/main.rs中，有如下代码：
+    后者，想学不嫌晚。训练营期间满分后都可以晋级（晋级也可以继续旁听，即进入下一阶段的微信群）。
 
-    #[cfg(feature = "board_k210")]
-    #[path = "boards/k210.rs"]
-    mod board;
-    #[cfg(not(any(feature = "board_k210")))]
-    #[path = "boards/qemu.rs"]
-    mod board;
+6. 以往的晋级率是怎样的？
 
-    这使得 mod board 可能是 k210.rs中的代码，也可能是qemu.rs中的代码，取决于编译时的参数，即 os/Makefile 中的：
+    最近六届第一阶段升第二阶段的晋级率如下：
+    - 2022春夏季：188人 -> 47人，晋级率 25%
+    - 2022秋冬季：274 人 -> 102 人，晋级率 37%
+    - 2023春夏季：283人 -> 128人，晋级率45%
+    - 2023秋冬季：1529人 -> 583人，晋级率38%
+    - 2024春夏季：2533人 -> 387人，晋级率15%
+    - 2024 秋冬季：4116 人 -> 677 人，晋级率 16.4%
 
-    @cargo build --release --features "board_$(BOARD)"
+    最近四届加入了第三阶段，从第二阶段到第三阶段的晋级率如下：
+    - 2023春夏季：128人 -> 26人，晋级率20%
+    - 2024秋冬季：583人 -> 84人，晋级率14%
+    - 2024春夏季：387人 -> 59人，晋级率15%
+    - 2024 秋冬季: 677 人 -> 125 人，晋级率 18.5%
+7. 一阶段Rustling写完了,剩余时间干什么？
+    
+    看RISC-V的文档提前熟悉不同特权级的概念和指令集。正常进度就是前三周之后第一阶段结束，如果跟不上到时可以先听第二阶段课程，但只有完成两个阶段晋级任务后才可以进入第三阶段项目课题组进行项目实习。
 
-    rust-analyzer会报错：unresolved import `crate::drivers::chardev::UART` 等错误
+8. 开源操作系统训练营的管理要求
 
-**解决方法**
+    在第一阶段，下面的内容不做强制要求，但是从第二阶段开始便会对 Blog 提出要求。
+    - 代码提交记录：完成练习和实验时的代码和注释 
+    yunwei37的参考样例：https://github.com/yunwei37/os-summer-of-code-daily
+    - 进展日志：记录自己的进展、收获、遇到的问题
+    项晨东的参考样例：https://github.com/OS-F-4/usr-intr/tree/main/ppt
+    - 总结报告：向训练营blog提交总结报告（见下问）
+    训练营 blog 提交库的链接：https://github.com/rcore-os/blog
+    - 朱威浦的参考样例：
+    https://github.com/bit-mips/about-contest/blob/master/%E5%A4%A7%E8%B5%9B%E5%BF%83%E5%BE%97%E6%80%BB%E7%BB%93.md
 
-    在 .vscode/settings.json中添加如下内容：
+9.  关于如何写总结报告
 
-    // Prevent "can't find crate for `test`" error on no_std
-    // Ref: https://github.com/rust-lang/vscode-rust/issues/729
-    // For vscode-rust plugin users:
-    "rust.target": "riscv64gc-unknown-none-elf",
-    "rust.all_targets": false,
-    // For Rust Analyzer plugin users:
-    "rust-analyzer.cargo.target": "riscv64gc-unknown-none-elf",
-    "rust-analyzer.checkOnSave.allTargets": false,
-    "rust-analyzer.cargo.features": [
-        "board_qemu"
-    ]
+    在训练营第二、三、四阶段结束后，都需要将自己在这一阶段的收获形成一份总结报告提交到https://github.com/rcore-os/blog 这个仓库，总结报告是进入下一阶段的必要条件。
+    
+    >（注1：这个rcore-os/blog仓库，同学们没有提交权限，需要按照README.md文档中的说明，fork仓库到本地并修改之后，向该仓库提交pr，并找助教审核，如果长时间没有审核，请联系助教，如果提交存在问题，也可以联系助教）
 
-**rust-analyzer插件无法正常解析repo中多个不同projects中的代码**
+    另外我们鼓励同学们自行撰写学习记录，并在 [学习进展提交链接](https://github.com/LearningOS/rust-based-os-comp2025/issues/1) 提交相关链接。
 
-**解决方法**
+    > 注2：日常学习记录和总结报告不能混为一谈，前者是每日/周学习记录，后者是一个阶段的最终总结）
 
-    以本repo为例，在 .vscode/settings.json中添加如下内容：
+    我们会在总结报告blog中，挑选出部分优秀的报告，放在训练营主页上进行推荐。
 
-    "rust-analyzer.linkedProjects": [
-        "guide-code/ch1-3mini-rt-usrland/Cargo.toml",
-        "os1-ref/Cargo.toml",
-        "os2-ref/Cargo.toml",
-        "os3-ref/Cargo.toml",
-        "os4-ref/Cargo.toml",
-        "os5-ref/Cargo.toml",
-        "os6-ref/Cargo.toml",
-        "os7-ref/Cargo.toml",
-        "os8-ref/Cargo.toml",
-        "easy-fs/Cargo.toml",
-        "easy-fs-fuse/Cargo.toml",
-        "user/Cargo.toml",
-      ]
+10. Rustlings怎么开始练习？
+    
+    参考公告 [2025 春夏季训练营公告](./2025-spring-scheduling-1.md)进行第一阶段的学习，该链接也可以从群公告获取。
 
-    如果还有新的projects想要rust-analyzer分析，参考上面的例子，把projects对应路径加入即可。
+11. 优胜队伍相关
 
-**rust-analyzer插件无法正常解析rustlings repo中不同源码**
+    已经组队的各位同学可以在https://opencamp.cn/os2edu/camp/2025spring/stage/1?tab=team上面看到组队晋级标志，对于全队成员均晋级的队伍，队长可以联系一下 @阿图教育 加入优胜队长群，帮助全部队员完成晋级的队长可以获得一份奖品。（注，只有人数大于1的组队才算是有效组队）
 
-**解决方法**
+12. 为什么晋级榜单上没有自己的名字
 
-访问 <https://crates.io/crates/rustlings-fix>  安装并允许rustlings-fix工具，它会生成一个配置文件  rust-project.json ，然后就可以看了
+    请按照如下顺序进行检查：
+    1. 请确保 github 上仓库的 CICD 是否正常运行，并且返回一个绿色的✅。如果没有的话请根据 CI log 检查是否报错。
+    2. 请确保您在训练营平台上填写了您的 github 用户名。请进入 https://opencamp.cn/my/edit 后，在 GithubName 一栏填写自己在 GitHub 的用户名。提交后，还需要在您的 Rustlings 重新产生一个新的提交，才能覆盖掉之前的成绩。
 
-    # Install rustlings-fix from cargo
-    cargo install rustlings-fix
 
-    # Change directory into wherever rustlings is cloned
-    cd ~/src/rustlings
+13. 排行榜上的名字是一串字母，不是账号填写的姓名？
 
-    # Run the binary
-    rustlings-fix
+    请进入 https://opencamp.cn/my/edit 后，在 GithubName 一栏填写自己在 GitHub 的用户名。提交后，还需要重新 git commit + git push 产生一个新的提交，才能覆盖掉之前的成绩。
 
-## Q9：在用vscode中能否像一般应用一样，源码级调试rcore-tutorial-v3？如果可以，如何做？
+14. 排行榜上我的成绩重复了，有影响吗？
 
-**方法一：（适合vscode 一般用户）**
+    没有影响。这是目前网站的一个小问题，可能时注册了多个账号或者先提交成绩再（按问题2）绑定账号造成的。助教老师会之后手动去重。
 
-请看 [VSCode 可视化调试支持](https://learningos.github.io/rust-based-os-comp2022/0setup-devel-env.html#vscode)。
-感谢  @myrfy 米明恒的贡献！
+15. 排名会对成绩有影响吗？
 
-**方法二：（适合vscode熟手）**
+    没有影响。只要达到晋级要求即可，不会区分同学完成任务的时间早晚。
 
-目前 @chenzhiy2001 已经有了一个初步的实现方案，<https://github.com/chenzhiy2001/code-debug> 请访问 [coredebugger安装与使用](https://github.com/chenzhiy2001/code-debug#%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8) 了解具体操作过程。@chyyuu 试用后，觉得很不错！
+16. 更新了代码，为什么成绩没有更新？
 
-感谢  @chenzhiy2001 陈志扬的贡献！
+    排行榜成绩只取最高值，同分时取最早的提交时间点显示。如产生新的提交后得分不变，则不会更新。
 
-提示：
+17. 为什么本地做完了题目，提交时没有通过？
 
-1. 目前项目在开发中，还没有设计得对用户特别友好，建议新手慎用。
-2. 因为opt-level被设置成0，rCore Tutorial v3在qemu中会比较慢（在耗时的for循环等情况下，要有耐心等待）
+    Rustlings 要求每次做完一个测试时删掉代码中的 // I AM NOT DONE 注释。请检查自己的代码。
 
-**方法三：（适合Linux 命令行熟手）**
+18. 本地测试没问题，但提交时却少了几分？
 
-请看 [GDB 调试支持](https://learningos.github.io/rust-based-os-comp2022/0setup-devel-env.html#gdb)
+    1. 请检查自己的 GitHub 远端代码仓库，找到 Actions 页面，然后点击最新的 workflow run 进入（在绿色的√那里）
+
+    2. 然后点击唯一的一个 Jobs(Autograding)进入，打开 Run yfblock/os-autograding@master 一栏，其中标注了每一栏的成绩和出错的题。
+
+19. 在线测试也满分了，但排行榜上还是不对，怎么办？
+
+    有可能是训练营网站bug导致，可将截图和链接发到群里寻求帮助。
+20. clippy2 测例为什么做对了但提交不通过？
+
+    clippy 系列偶发问题，可以对 CICD Re-run all jobs 重新评测即可。或者也可以提交一个新的 commit （如任意文件加一个空格），再次触发评测
+21. tests7 测例为什么做完了没法通过？
+
+    看代码注释，需要改同文件夹下 build.rs 文件，并且需要和 tests8 测例的要求一起完成。
+22. 为什么我的总题目数量和别人的不一样？
+
+    请参照群公告加入 GitHub Classroom 生成自己的仓库，不要使用原版的 Rustlings。
+      
+## 第二阶段常见问题
+1. 晋级要求是啥，五个实验+报告吗？
+
+    第二阶段排行榜满500分，加第二阶段学习blog，截图发给阿图教育
+
+2. rCore-Tutorial 代码，如何提交结果并评测 ？
+
+    请在根目录下提交你的代码到 github 仓库，即会在 CICD 进行评测。
+
+3. 完成代码后，如何进行本地测试？
+
+    参考实验指导书 https://github.com/LearningOS/os-rcore-classroom-2025s-rcore-rCore-Camp-Code-2025S?tab=readme-ov-file#grading 一节。
+    ```sh
+    cd ci-user && make test CHAPTER=$ID 
+    # ID 为目前待测章节，如 3，4，5
+    ```
+
+    这个命令会 clone 评测脚本仓库到项目目录的 ci-user 文件夹，以及用户程序测例程序到项目目录的 ci-user/user 文件夹，切换到被测分支，即可进行本地测试（本地测试的过程与同学向 GitHub 远程仓库提交之后触发的 action 评测流程基本是一致的，通过本地测试即可排查错误，建议在提交评测之前先进行本地自测。我们默认晋级第二阶段的同学有一定的 git 知识，没有在指导书里再额外说明这些修改
+
+4. 尝试本地运行的时候 QEMU 卡住不输出怎么办？
+
+    优先考虑 QEMU 版本问题，见指导书 https://learningos.cn/rCore-Camp-Guide-2025S/0setup-devel-env.html#qemu 一节的说明 ，我们推荐使用 QEMU 7.0.0 版本进行实验。
+
+5. 本地运行 ci-user 中的脚本进行测试时，输出结果都对，但OK后的数字串不对导致不通过怎么办？
+
+    可能是由于 hash 值不一致导致的误判。请优先检查自己的代码输出，确认输出无误后，可以尝试删除 ci-user 目录，重新 git clone 拉取后重新进行评测
+
+6. 第二阶段开始需要提交blog，blog是什么？
+
+    每个阶段结束后需要写总结报告，第二阶段需要完成第一、二阶段的blog。
+
+    总结报告和每个实验的实验报告是两回事，都需要完成。
+
+7. ch3完成后排行榜没有显示分数怎么办？
+
+    如果 Actions 中 basic-test 阶段失败：检查是否有实验报告文件 reports/lab1.md，或者本地使用 README.md 提供的 Grading 方法测试。
+
+    否则检查自己的 Actions 的具体报错是什么，如果自己无法解决可以截图发到群里。
+
+

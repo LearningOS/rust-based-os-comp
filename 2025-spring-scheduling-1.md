@@ -1,16 +1,15 @@
 
-# 2024年春夏季开源操作系统训练营：第一阶段
+# 2025年春夏季开源操作系统训练营：第一阶段
 
-- [新闻与纪要](./news.md)
-- [常见问题解答](./QA.md)
-- [Learning Resource](./relatedinfo.md) (训练营学习资源)
+- [OS 导学视频](https://opencamp.cn/os2edu/camp/2025spring/stage/0?tab=video)
+- [第一阶段学习：Rustlings Rust编程教程](https://classroom.github.com/a/nxqlgJOx)
 - Online Ranking （训练营在线排行榜）
-  - [第一阶段排行：Rust Lang](https://learningos.cn/rust-rustlings-2024-spring-ranking/)
-  - [rustlings Rust编程训练教室](https://classroom.github.com/a/-WftLmvV)
+  - [第一阶段排行：Rust Lang](https://opencamp.cn/os2edu/camp/2025spring/stage/1?tab=rank)
 
-欢迎在校学生/工程师在2024年春季参加清华大学、CSDN、阿图教育等共同举办的**2024年春季开源操作系统训练营**活动（2024.4.07～2024.6.30）。训练营结束后，部分表现突出的同学将获得训练营优秀证书。鼓励同学继续以开源社区的方式参与到企业/科研院所的操作系统实习/实践/工作/学习等相关的活动。
-
-> 我们也在持续探索和改进开源操作系统训练营，即这个活动不仅仅局限在 2024.4.07～2024.6.30。我们希望建立的是一种长期持续发展的操作系统训练营模式，即各种学习资源都开源并整理集中在一起，导师/助教和学生/爱好者之间基于要做的实验或项目不定期/定期的进行交流。学生/爱好者完成了一定程度的学习和训练后，除了自身得到能力的提升外，还可获得相关证书和就业/学习等机会和相关推荐等，推动他在未来的进一步发展。
+- [常见问题解答](./QA.md)
+- [Learning Resource](./relatedinfo.md) (学习资源汇总)
+  
+欢迎在校学生/工程师在2025年春季参加清华大学、阿图教育等共同举办的**2025年春夏季开源操作系统训练营**活动（2025.3.30~2025.6.22）。训练营结束后，表现突出的同学将获得训练营优秀证书，部分优秀同学将得到前往**清华科技园、泉城实验室线下实习**的机会。鼓励同学继续以开源社区的方式参与到企业/科研院所的操作系统实习/实践/工作/学习等相关的活动。
 
 ## 目标：
 
@@ -24,12 +23,12 @@
 
 ## 相关信息：
 
-- [参加2020--2022 OS训练营学生的blog](https://rcore-os.github.io/blog/)，鼓励参加2024 OS训练营的同学把自己在学习过程中的感悟/收获等写成blog，生成pr，并提交到 <https://github.com/rcore-os/blog> 上，让更多人看到你的进步！
-- **注意** 为及时了解和指导同学的学习和实践情况并推动学生相互帮助，本次活动要求学生把每周学习实践的过程记录（Markdown格式）放在github上自己的公开repo中。可参见[每日学习实践的具体例子](https://github.com/GCYYfun/DailySchedule)和[2020年OS训练营同学的每日学习情况汇总](https://github.com/rcore-os/rCore-Tutorial/issues/18 ) 。请参加实习的同学把记录每天的进展的git repo网址 更新到[2024年OS训练营同学的每日学习情况汇总](https://github.com/LearningOS/rust-based-os-comp2023/issues/200) 中。要求每位同学在自己的git repo中记录自己的每周进展，其他同学也可以参考学习。
-- **注意** 第一阶段学习中的技术问题，建议基于[OS训练营github discussion](https://github.com/LearningOS/rust-based-os-comp2023/discussions) 发出并讨论。
+- [参加往届 OS 训练营学生的 Blog](https://rcore-os.github.io/blog/)，鼓励参加2025 OS训练营的同学把自己在学习过程中的感悟/收获等写成blog，生成pr，并提交到 <https://github.com/rcore-os/blog> 上，让更多人看到你的进步！**提交博客pr是第二、三、四阶段的必要要求**。
+- **注意** 为及时了解和指导同学的学习和实践情况并推动学生相互帮助，鼓励学生把每周学习实践的过程记录（Markdown格式）放在github上自己的公开repo中。可参见[参考实例](https://github.com/GCYYfun/DailySchedule)和[2020年每日学习汇总](https://github.com/rcore-os/rCore-Tutorial/issues/18 ) 。请参加实习的同学把记录每天的进展的git repo网址 更新到[2025年OS训练营同学的每日学习情况汇总](https://github.com/LearningOS/rust-based-os-comp2025/issues/1) 中。要求每位同学在自己的git repo中记录自己的每周进展，其他同学也可以参考学习。
+- **注意** 常见问题详见 [训练营常见问题](https://docs.qq.com/doc/DWFV2eWdaZktvaWVo)，如果有问题可以在 [问答论坛](https://opencamp.cn/os2edu/bbs) 和微信群中进行提问。
 
 
-# 2024春夏季开源操作系统训练营第一阶段环境配置与学习资料
+# 2025春夏季开源操作系统训练营第一阶段环境配置与学习资料
 
 前提条件： 要求有基本数据结构，算法基础，相对了解或熟悉C语言等编程.
 
@@ -42,7 +41,7 @@
 
 2. 自学编程
    
-   - [2024春夏季OS训练营--rustling训练]（采用Github Classroom模式的Rustling小练习，点击上述链接，形成自己的练习用repo）
+   - [2025春夏季OS训练营--rustling训练](https://classroom.github.com/a/S8vP0lDr)（采用Github Classroom模式的Rustling小练习，点击上述链接，形成自己的练习用repo）
      
      - 要求：**必须完成** 。完成所有练习后，执行 ``git add; git commit -m"update"; git push`` 命令，把更新提交到GithubClassroom的CI进行自动评测。要求小练习全部通过GithubClassroom的CI自动评测。
      
@@ -54,7 +53,7 @@
        
        1. 在网络浏览器中用自己的 github id 登录 github.com。
        
-       2. 接收 [Rust-lang Lab Test based on Rustlings 的github classroom在线邀请](https://classroom.github.com/a/-WftLmvV)  ，根据提示一路选择OK即可。
+       2. 接收 [Rust-lang Lab Test based on Rustlings 的github classroom在线邀请](https://classroom.github.com/a/S8vP0lDr)  ，根据提示一路选择OK即可。
        
        3. 完成第二步后，你的rustings实验练习 的 github repository 会被自动建立好，点击此github repository的链接，就可看到你要完成的实验了。
        
@@ -62,7 +61,7 @@
        
        5. 再按照下面的环境安装提示在vscode的 `console` 中安装配置开发环境：rustc等工具。
        
-       6. 然后就可以基于在线vscode进行测试 (执行命令 `rustlings watch` ），编辑代码的循环实验过程了。
+       6. 然后就可以基于在线vscode进行测试 (执行命令 `rustlings watch`)，编辑代码的循环实验过程了。
        
        7. 如果使用本地的环境进行rustlings的练习，请按照接下来的步骤进行：首先需要安装一个Linux的环境，对于windows的用户，推荐使用wsl2，也可以使用vmware等虚拟机进行安装。如果在这一步存在问题，请联系助教。
        
@@ -76,7 +75,7 @@
        
        11. 练习rustlings。使用vscode等编辑器，进入clone下来的目录下的`exercises`文件夹，依次完成对应的练习。随后在rustlings的根目录下使用`rustlings run 练习名称`去运行对应练习，也可以使用`rustlings hint 练习名称`查看题解。
        
-       12. 提交。当做完部分或所有练习之后，执行 ``git add; git commit -m "update"; git push`` 命令，把更新提交到GithubClassroom的CI进行自动评测。你可以在github仓库页面的actions页面，看到你的CI提交结果，或者在排行榜上面查看自己的评分。
+       12. 提交。当做完部分或所有练习之后，执行 ``git add; git commit -m "$Your commit message"; git push`` 命令，把更新提交到GithubClassroom的CI进行自动评测。你可以在github仓库页面的actions页面，看到你的CI提交结果，或者在排行榜上面查看自己的评分。
        
        13. 上述步骤有任何问题都可以找助教。
    
@@ -89,7 +88,9 @@
      - 要求：大部分练习会做或能读懂。（**非必须完成**）
      - [exercism.io官方站点](https://exercism.io/)
 
-#### step 1 自学risc-v系统结构（大约2~7天）
+### 自学Risc-v系统结构（大约2~7天）
+
+**第二阶段**的操作系统的课程实验基于 RISC-V 架构。推荐同学在完成 Rust 语言的基本学习后，参考下面资料，预习 Risc-v 架构的内容。
 
 前提条件：要求有基本计算机组成原理，计算机系统结构基础。
 
