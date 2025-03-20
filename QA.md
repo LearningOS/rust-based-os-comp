@@ -257,4 +257,16 @@
 
     否则检查自己的 Actions 的具体报错是什么，如果自己无法解决可以截图发到群里。
 
+8. 如何配置 Docker 开发环境
 
+    1. 拉取 Docker 镜像
+    ```sh
+    docker pull wangben18/rcore-tutorial-v3:v0.1.0
+    ```
+    > 如果拉取镜像速度慢，可以考虑使用代理，请参考文档 [Docker pull 代理](https://www.lfhacks.com/tech/pull-docker-images-behind-proxy/) 和 [官方文档](https://docs.docker.com/engine/daemon/proxy/#systemd-unit-file)
+
+
+    2. 运行 Docker 容器：请执行如下指令：
+    ```sh
+    DOCKER_NAME=wangben18/rcore-tutorial-v3:v0.1.0 make docker
+    ```
