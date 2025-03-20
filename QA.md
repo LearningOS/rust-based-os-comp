@@ -266,7 +266,21 @@
     > 如果拉取镜像速度慢，可以考虑使用代理，请参考文档 [Docker pull 代理](https://www.lfhacks.com/tech/pull-docker-images-behind-proxy/) 和 [官方文档](https://docs.docker.com/engine/daemon/proxy/#systemd-unit-file)
 
 
-    2. 运行 Docker 容器：请执行如下指令：
+    2. 运行 Docker 容器：以 ch3 为例，请执行如下指令：
     ```sh
+    # 拉取仓库
+    git clone $YOUR_REPO_URL -b ch3
+
+    # 进入仓库
+    cd $YOUR_REPO_NAME
+
     DOCKER_NAME=wangben18/rcore-tutorial-v3:v0.1.0 make docker
+
+    # 在 Docker 容器内
+    
+    # 设置 git 信任目录
+    git config --global --add safe.directory /mnt
+
+    # 运行 rCore-Tutorial-OS
+    cd os && make run
     ```
