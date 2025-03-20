@@ -162,5 +162,5 @@ TODO
 
   - 问答论坛：https://opencamp.cn/os2edu/bbs，欢迎大家积极发帖讨论
   - 在微信群中提问，如果长时间未得到回复可以手动 at 负责人
-  - **注意：**有任何疑问，请优先查看 [常见问题](https://github.com/LearningOS/rust-based-os-comp2025/blob/main/QA.md)，确认常见问题列表中不存在您的问题，再通过微信群@助教以及【问答论坛】等方式提问， 常见问题列表会随着训练营的推进不断补充完善，感谢大家的参与和支持！
+  - **注意**：有任何疑问，请优先查看 [常见问题](https://github.com/LearningOS/rust-based-os-comp2025/blob/main/QA.md)，确认常见问题列表中不存在您的问题，再通过微信群@助教以及【问答论坛】等方式提问， 常见问题列表会随着训练营的推进不断补充完善，感谢大家的参与和支持！
 
