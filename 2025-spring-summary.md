@@ -9,7 +9,7 @@
   - 第三阶段公告：TODO
 - 常见问题：[QA](https://github.com/LearningOS/rust-based-os-comp2025/blob/main/QA.md)
 - 提问方式：
-  - 问答论坛：https://opencamp.cn/os2edu/bbs，欢迎大家积极发帖讨论
+  - 问答论坛：https://opencamp.cn/os2edu/bbs ，欢迎大家积极发帖讨论
   - 在微信群中提问，如果长时间未得到回复可以手动 at 负责人
   - **注意**: 有任何疑问，请优先查看 [常见问题](https://github.com/LearningOS/rust-based-os-comp2025/blob/main/QA.md)，确认常见问题列表中不存在您的问题，再通过微信群@助教以及【问答论坛】等方式提问， 常见问题列表会随着训练营的推进不断补充完善，感谢大家的参与和支持！
 
@@ -44,7 +44,7 @@
 - 请在训练营平台上完善自己的 Github 账号
   - 在训练营网站 https://opencamp.cn 上进行登陆
   - 点击右上角 `个人中心` 按钮，进入个人中心
-  - 点击 `编辑个人信息`，或者访问https://opencamp.cn/my/edit，找到 `GithubName` 栏目，添加您的 Github 账号
+  - 点击 `编辑个人信息`，或者访问 https://opencamp.cn/my/edit ，找到 `GithubName` 栏目，添加您的 Github 账号
 - 开发环境最好是 Linux 环境，后续可能会上线 Github Classroom 支持
 
 ## 第一阶段学习
@@ -85,7 +85,7 @@
 
   - 在该仓库上进行提交，便会通过 CICD 来 评分并且同步在比赛平台的排行榜：https://opencamp.cn/os2edu/camp/2025spring/stage/1?tab=rank
 
-  - 如何开始训练：参考[春夏季第一阶段公告](https://github.com/LearningOS/rust-based-os-comp2025/blob/main/2025-spring-scheduling-1.md) 进行环境配置和训练
+  - 如何开始训练：参考 [春夏季第一阶段公告](https://github.com/LearningOS/rust-based-os-comp2025/blob/main/2025-spring-scheduling-1.md) 进行环境配置和训练
 
 ### 晋级条件
 
@@ -160,7 +160,7 @@ TODO
 
 - 提问方式：
 
-  - 问答论坛：https://opencamp.cn/os2edu/bbs，欢迎大家积极发帖讨论
+  - 问答论坛：https://opencamp.cn/os2edu/bbs ，欢迎大家积极发帖讨论
   - 在微信群中提问，如果长时间未得到回复可以手动 at 负责人
   - **注意**：有任何疑问，请优先查看 [常见问题](https://github.com/LearningOS/rust-based-os-comp2025/blob/main/QA.md)，确认常见问题列表中不存在您的问题，再通过微信群@助教以及【问答论坛】等方式提问，常见问题列表会随着训练营的推进不断补充完善，感谢大家的参与和支持！
 
