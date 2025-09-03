@@ -22,7 +22,6 @@
 前提条件：要求有操作系统的基础，基本理解RISC-V与OS相关的硬件特性
 
 
-
 ### 建立基于ClassRoom实验的具体步骤
 
 - [rCore Tutorial ClassRoom邀请链接](https://classroom.github.com/a/pTgmDIG6)：点击后按提示可以建立自己的rCore Tutorial实验专用仓库

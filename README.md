@@ -1,12 +1,12 @@
-# Open-Source OS Training Comp 2025
+# Open-Source OS Training Comp
 
-Welcome to Open-Source OS Training Comp 2025（欢迎加入 2025 年开源操作系统训练营）
+Welcome to Open-Source OS Training Comp.
 
-## 重要信息
-- 2025.3.19:发布2025年春夏季开源操作系统训练营[**重要信息**](./2025-spring-summary.md)，请仔细阅读。
-- 2025.3.15:2025年春夏季开源操作系统训练营准备中。
+## 筹备指引
+最新一次的筹备指引为 [2025 年春夏季开源操作系统训练营筹备指引](./notice/2025-spring/summary.md)。
 
 ## 历史
+- [open-source os training comp 2025](https://github.com/LearningOS/rust-based-os-comp2025)
 - [open-source os training comp 2024](https://github.com/LearningOS/rust-based-os-comp2024)
 - [open-source os training comp 2023](https://github.com/LearningOS/rust-based-os-comp2023)
 - [open-source os training comp 2022](https://github.com/LearningOS/rust-based-os-comp2023/tree/comp2022)
